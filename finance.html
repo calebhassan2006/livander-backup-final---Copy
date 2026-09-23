@@ -1,0 +1,172 @@
+
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance | Livander Store</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head><body><div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">LIVANDER</h2>
+        <p class="logo-subtitle">Business Management</p>
+
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="inventory.html">📦 Inventory</a>
+            <a href="sales.html">💰 Sales</a>
+            <a href="finance.html" class="active">📊 Finance</a>
+            <a href="employees.html">👥 Employees</a>
+            <a href="customers.html">🧑 Customers</a>
+            <a href="reports.html">📈 Reports</a>
+        </nav>
+
+        <button class="logout-btn">🚪 Logout</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="top-header">
+            <div>
+                <h1>Finance Management</h1>
+                <p>Track your business income, expenses and profit</p>
+            </div>
+        </header>
+
+        <!-- Financial Summary -->
+        <section class="stats-container">
+
+            <div class="stat-card">
+                <div class="stat-icon">💰</div>
+                <div>
+                    <p>Total Income</p>
+                    <h2 id="finance-income">KES 0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">💸</div>
+                <div>
+                    <p>Total Expenses</p>
+                    <h2 id="finance-expenses">KES 0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div>
+                    <p>Net Profit</p>
+                    <h2 id="finance-profit">KES 0</h2>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Add Expense -->
+        <section class="form-section">
+
+            <h2>Add Business Expense</h2>
+
+            <form id="expense-form">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Expense Description</label>
+                        <input
+                            type="text"
+                            id="expense-description"
+                            placeholder="e.g. Electricity bill"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Expense Category</label>
+                        <select id="expense-category" required>
+                            <option value="">Select category</option>
+                            <option value="Rent">Rent</option>
+                            <option value="Utilities">Utilities</option>
+                            <option value="Salaries">Salaries</option>
+                            <option value="Transport">Transport</option>
+                            <option value="Stock">Stock</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Amount (KES)</label>
+                        <input
+                            type="number"
+                            id="expense-amount"
+                            placeholder="Enter amount"
+                            min="0"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input
+                            type="date"
+                            id="expense-date"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    ➕ Add Expense
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Expenses Table -->
+        <section class="table-section">
+
+            <div class="section-header">
+                <h2>Business Expenses</h2>
+                <input
+                    type="text"
+                    id="expense-search"
+                    placeholder="🔍 Search expense"
+                >
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="expense-table-body">
+                        <!-- Expenses will appear here -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

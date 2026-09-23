@@ -1,0 +1,128 @@
+
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees | Livander Store</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head><body><div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">LIVANDER</h2>
+        <p class="logo-subtitle">Business Management</p>
+
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="inventory.html">📦 Inventory</a>
+            <a href="sales.html">💰 Sales</a>
+            <a href="finance.html">📊 Finance</a>
+            <a href="employees.html" class="active">👥 Employees</a>
+            <a href="customers.html">🧑 Customers</a>
+            <a href="reports.html">📈 Reports</a>
+        </nav>
+
+        <button class="logout-btn">🚪 Logout</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="top-header">
+            <div>
+                <h1>Employee Management</h1>
+                <p>Manage your business employees in one place</p>
+            </div>
+        </header>
+
+        <!-- Add Employee -->
+        <section class="form-section">
+            <h2>Add New Employee</h2>
+
+            <form id="employee-form">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Employee Name</label>
+                        <input type="text" id="employee-name" placeholder="Enter employee name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="employee-phone" placeholder="Enter phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Job Role</label>
+                        <input type="text" id="employee-role" placeholder="Enter job role" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Monthly Salary (KES)</label>
+                        <input type="number" id="employee-salary" placeholder="Enter salary" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date Joined</label>
+                        <input type="date" id="employee-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select id="employee-status" required>
+                            <option value="">Select status</option>
+                            <option value="Active">Active</option>
+                            <option value="Inactive">Inactive</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    ➕ Add Employee
+                </button>
+
+            </form>
+        </section>
+
+        <!-- Employees Table -->
+        <section class="table-section">
+
+            <div class="section-header">
+                <h2>Your Employees</h2>
+                <input type="text" id="employee-search" placeholder="🔍 Search employee">
+            </div>
+
+            <div class="table-container">
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone Number</th>
+                            <th>Job Role</th>
+                            <th>Salary</th>
+                            <th>Date Joined</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="employee-table-body">
+                        <!-- Employees will appear here -->
+                    </tbody>
+
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

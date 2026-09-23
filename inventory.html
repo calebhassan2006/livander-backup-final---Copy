@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inventory | Livander Store</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2 class="logo">LIVANDER</h2>
+            <p class="logo-subtitle">Business Management</p>
+
+            <nav>
+                <a href="index.html">🏠 Dashboard</a>
+                <a href="inventory.html" class="active">📦 Inventory</a>
+                <a href="sales.html">💰 Sales</a>
+                <a href="finance.html">📊 Finance</a>
+                <a href="employees.html">👥 Employees</a>
+                <a href="customers.html">🧑 Customers</a>
+                <a href="reports.html">📈 Reports</a>
+            </nav>
+
+            <button class="logout-btn">🚪 Logout</button>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Page Header -->
+            <header class="top-header">
+
+                <div>
+                    <h1>Inventory Management</h1>
+                    <p>Add and manage your business products</p>
+                </div>
+
+            </header>
+
+
+            <!-- Inventory Summary -->
+            <section class="stats-container">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">📦</div>
+
+                    <div>
+                        <p>Total Products</p>
+                        <h2 id="inventory-total-products">0</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">🏷️</div>
+
+                    <div>
+                        <p>Total Stock</p>
+                        <h2 id="inventory-total-stock">0</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">💰</div>
+
+                    <div>
+                        <p>Stock Value</p>
+                        <h2 id="inventory-stock-value">KES 0</h2>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Add New Product -->
+            <section class="form-section">
+
+                <h2>Add New Product</h2>
+
+                <form id="product-form">
+
+                    <div class="form-grid">
+
+                        <!-- Product Name -->
+                        <div class="form-group">
+                            <label for="product-name">Product Name</label>
+
+                            <input
+                                type="text"
+                                id="product-name"
+                                placeholder="Enter product name"
+                                required
+                            >
+                        </div>
+
+
+                        <!-- Category -->
+                        <div class="form-group">
+                            <label for="product-category">Category</label>
+
+                            <input
+                                type="text"
+                                id="product-category"
+                                placeholder="Enter category"
+                                required
+                            >
+                        </div>
+
+
+                        <!-- Quantity -->
+                        <div class="form-group">
+                            <label for="product-quantity">Quantity</label>
+
+                            <input
+                                type="number"
+                                id="product-quantity"
+                                placeholder="Enter quantity"
+                                min="0"
+                                required
+                            >
+                        </div>
+
+
+                        <!-- Buying Price -->
+                        <div class="form-group">
+                            <label for="product-buying-price">
+                                Buying Price (KES)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="product-buying-price"
+                                placeholder="Enter buying price"
+                                min="0"
+                                required
+                            >
+                        </div>
+
+
+                        <!-- Selling Price -->
+                        <div class="form-group">
+                            <label for="product-selling-price">
+                                Selling Price (KES)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="product-selling-price"
+                                placeholder="Enter selling price"
+                                min="0"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        ➕ Add Product
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- Product List -->
+            <section class="table-section">
+
+                <div class="section-header">
+
+                    <h2>Product Inventory</h2>
+
+                    <input
+                        type="text"
+                        id="product-search"
+                        placeholder="Search products..."
+                    >
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Product</th>
+                                <th>Category</th>
+                                <th>Quantity</th>
+                                <th>Buying Price</th>
+                                <th>Selling Price</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="product-table-body">
+
+                            <!-- Products appear here -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

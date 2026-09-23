@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports | Livander Store</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2 class="logo">LIVANDER</h2>
+        <p class="logo-subtitle">Business Management</p>
+
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="inventory.html">📦 Inventory</a>
+            <a href="sales.html">💰 Sales</a>
+            <a href="finance.html">📊 Finance</a>
+            <a href="employees.html">👥 Employees</a>
+            <a href="customers.html">🧑 Customers</a>
+            <a href="reports.html" class="active">📈 Reports</a>
+        </nav>
+
+        <button class="logout-btn">🚪 Logout</button>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="top-header">
+            <div>
+                <h1>Business Reports</h1>
+                <p>View your business performance</p>
+            </div>
+        </header>
+
+        <section class="stats-container">
+
+            <div class="stat-card">
+                <div class="stat-icon">💰</div>
+                <div>
+                    <p>Total Sales</p>
+                    <h2 id="report-sales">KES 0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">💸</div>
+                <div>
+                    <p>Total Expenses</p>
+                    <h2 id="report-expenses">KES 0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div>
+                    <p>Net Profit</p>
+                    <h2 id="report-profit">KES 0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">📦</div>
+                <div>
+                    <p>Total Products</p>
+                    <h2 id="report-products">0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div>
+                    <p>Total Employees</p>
+                    <h2 id="report-employees">0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">🧑</div>
+                <div>
+                    <p>Total Customers</p>
+                    <h2 id="report-customers">0</h2>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="table-section">
+
+            <h2>Sales Report</h2>
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Items Sold</th>
+                            <th>Total Amount</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="report-sales-body">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

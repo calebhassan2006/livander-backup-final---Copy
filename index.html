@@ -1,0 +1,102 @@
+
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livander Store Management</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head><body><div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">LIVANDER</h2>
+        <p class="logo-subtitle">Business Management</p>
+
+        <nav>
+            <a href="index.html" class="active">🏠 Dashboard</a>
+            <a href="inventory.html">📦 Inventory</a>
+            <a href="sales.html">💰 Sales</a>
+            <a href="finance.html">📊 Finance</a>
+            <a href="employees.html">👥 Employees</a>
+            <a href="customers.html">🧑 Customers</a>
+            <a href="reports.html">📈 Reports</a>
+        </nav>
+
+        <button class="logout-btn">🚪 Logout</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="top-header">
+            <div>
+                <h1>Dashboard</h1>
+                <p>Welcome to Livander Store Management System</p>
+            </div>
+
+            <div class="admin-profile">
+                <span>👤</span>
+                <div>
+                    <strong>Administrator</strong>
+                    <p>Business Owner</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Statistics Cards -->
+        <section class="stats-container">
+
+            <div class="stat-card">
+                <div class="stat-icon">📦</div>
+                <div>
+                    <p>Total Products</p>
+                    <h2 id="total-products">0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">💰</div>
+                <div>
+                    <p>Total Sales</p>
+                    <h2 id="total-sales">KES 0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div>
+                    <p>Total Employees</p>
+                    <h2 id="total-employees">0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div>
+                    <p>Estimated Profit</p>
+                    <h2 id="total-profit">KES 0</h2>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <h2>Quick Actions</h2>
+
+            <div class="action-buttons">
+                <a href="inventory.html" class="action-btn">➕ Add Product</a>
+                <a href="sales.html" class="action-btn">🛒 Record Sale</a>
+                <a href="employees.html" class="action-btn">👤 Add Employee</a>
+                <a href="finance.html" class="action-btn">💳 Add Expense</a>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
